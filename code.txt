@@ -1,0 +1,115 @@
+Column(
+      children: <Widget>[
+        Container(
+          width: MediaQuery.of(context).size.width,
+          alignment: Alignment.center,
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 200),
+          margin:  const EdgeInsets.only(left: 20.0, right: 20.0),
+          decoration: BoxDecoration(border: Border.all(
+            color: Colors.red,), image: DecorationImage(
+            image: AssetImage(
+                'assets/pic1.jpg'),
+            fit: BoxFit.fill,
+          ), borderRadius: BorderRadius.all(Radius.circular(20)),),
+        )
+      ],)
+
+
+new proj
+
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(backgroundColor: Colors.black, title: Text('Music Player 2023'),
+      bottom: TabBar(
+        tabs: [
+          Tab(text: 'All music'),
+          Tab(text: 'Albums'),
+          Tab(text: 'Artists'),
+        ],
+      ),
+    ),
+      body: TabBarView(
+        children: [
+          Scrollbar(child: ListView(children: [
+            Container(
+              color: Colors.green,
+              height: 200,
+              child: Material(
+                child: QueryArtworkWidget(id: allSongList[11].id, type: ArtworkType.AUDIO,)
+              ),
+            ),
+            Container(
+              color: Colors.green,
+
+              height: 200,
+              child: Column(children:[
+              Text(
+              "${allSongList[0].title}"),
+                Text(
+                    "${allSongList[0].artist}"),
+                Text(
+                    "${allSongList[0].album}"),
+
+
+              ])
+            ),
+            Container(
+              color: Colors.green,
+              height: 200,
+              child: const Material(
+                child: ListTile(
+                  title: Text('ListTile with red background'),
+                  tileColor: Colors.indigo,
+                ),
+              ),
+            ),
+            Container(
+              color: Colors.green,
+              height: 200,
+              child: const Material(
+                child: ListTile(
+                  title: Text('ListTile with red background'),
+                  tileColor: Colors.indigo,
+                ),
+              ),
+            ),
+            Container(
+              color: Colors.green,
+              height: 200,
+              child: const Material(
+                child: ListTile(
+                  title: Text('ListTile with red background'),
+                  tileColor: Colors.indigo,
+                ),
+              ),
+            )
+          ]),),
+          Icon(Icons.directions_transit),
+          Icon(Icons.directions_bike),
+        ],
+      ),);
+  }
+}
+
+
+111111
+
+
+Text( 
+  "Lorem Ipsum is simply dummy text.",
+  style: TextStyle( 
+      fontSize: 18,
+      height: 2, //line height 200%, 1= 100%, were 0.9 = 90% of actual line height
+      color: Colors.redAccent, //font color
+      backgroundColor: Colors.black12, //background color
+      letterSpacing: 5, //letter spacing
+      decoration: TextDecoration.underline, //make underline
+      decorationStyle: TextDecorationStyle.double, //double underline
+      decorationColor: Colors.brown, //text decoration 'underline' color
+      decorationThickness: 1.5, //decoration 'underline' thickness
+      fontStyle: FontStyle.italic
+  ),
+)
+2222
+Text("${allSongList[index].artist}", style: TextStyle(color: Colors.white)), title: Text("${index + 1}. ${allSongList[index].title}", style: TextStyle(color: Colors.white, fontSize: 19)))
